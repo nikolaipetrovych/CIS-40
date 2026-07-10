@@ -1,6 +1,6 @@
 # p14.py
 # Nikolai Petrovych
-# 7/5/26
+# 7/5/26 - 7/10/26
 # Python 3.12.10
 # Description: 
 '''Write a program that asks the user for day and month of a birthday.
@@ -21,66 +21,79 @@ Constellation   English Name	    Dates
 -Pisces		    The Fishes	        Feb. 19-Mar. 20	'''
 
 
-# ask for for month and day of birth
+# ask for for month
 print("Please enter the month and day you were born on.")
 month = int(input('Enter the number corresponding to the month you were born in: '))
-day = int(input('Enter the day: '))
 
-#check if the entry is valid
+#check if month the entry is valid
 if month < 1 or month > 12:
     print('***ERROR: Invalid month entry***')
     quit()
 
-if (month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12) and ((day < 1) or (day > 31)):
+# ask for day
+day = int(input('Enter the day: '))
+
+#check if the day entry is valid
+if (day < 1) or (day > 31):
     print('***ERROR: Invalid day entry***')
+    quit()
 elif (month == 4 or month == 6 or month == 9 or month == 11) and ((day < 1) or (day > 30)):
-    print('***ERROR: Invalid day entry***') 
+    print('***ERROR: Invalid day entry***')
+    quit()
 elif month == 2 and ((day < 1) or (day > 28)):
     print('***ERROR: Invalid day entry***')
+    quit()
 
 
 #check zodiac sign
+# aries
 if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+    print("Your Zodiac Sign is a Aries")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# taurus
+if ( month == 4 and day >= 20 ) or ( month == 5 and day <= 20 ):
+    print("Your Zodiac Sign is a Taurus")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# gemini
+if ( month == 5 and day >= 21 ) or ( month == 6 and day <= 21 ):
+    print("Your Zodiac Sign is a Gemini")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# cancer
+if ( month == 6 and day >= 22 ) or ( month == 7 and day <= 22 ):
+    print("Your Zodiac Sign is a Cancer")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# leo
+if ( month == 7 and day >= 23 ) or ( month == 8 and day <= 22 ):
+    print("Your Zodiac Sign is a Leo")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# virgo
+if ( month == 8 and day >= 23 ) or ( month == 9 and day <= 22 ):
+    print("Your Zodiac Sign is a Virgo")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# libra
+if ( month == 9 and day >= 23 ) or ( month == 10 and day <= 23 ):
+    print("Your Zodiac Sign is a Libra")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# scorpio
+if ( month == 10 and day >= 23 ) or ( month == 11 and day <= 21 ):
+    print("Your Zodiac Sign is a Scorpio")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# sagittarius
+if ( month == 11 and day >= 22 ) or ( month == 12 and day <= 21 ):
+    print("Your Zodiac Sign is a Sagittarius")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# capricorn
+if ( month == 12 and day >= 22 ) or ( month == 1 and day <= 19 ):
+    print("Your Zodiac Sign is a Capricorn")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# aquarius
+if ( month == 1 and day >= 20 ) or ( month == 2 and day <= 18 ):
+    print("Your Zodiac Sign is a Aquarius")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
+# pisces
+if ( month == 2 and day >= 19 ) or ( month == 3 and day <= 20 ):
+    print("Your Zodiac Sign is a Pisces")
 
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
-
-if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
-    print("You are ______")
 
 
 
@@ -88,6 +101,22 @@ if ( month == 3 and day >= 21 ) or ( month == 4 and day <= 19 ):
 
 ***PROGRAM OUTPUT***
 
-[------]
+Please enter the month and day you were born on.
+Enter the number corresponding to the month you were born in: 8
+Enter the day: 6
+Your Zodiac Sign is a Leo
+
+Please enter the month and day you were born on.
+Enter the number corresponding to the month you were born in: 13
+***ERROR: Invalid month entry***
+
+Please enter the month and day you were born on.
+Enter the number corresponding to the month you were born in: 0
+***ERROR: Invalid month entry***
+
+Please enter the month and day you were born on.
+Enter the number corresponding to the month you were born in: 4
+Enter the day: 31
+***ERROR: Invalid day entry***
 
 '''

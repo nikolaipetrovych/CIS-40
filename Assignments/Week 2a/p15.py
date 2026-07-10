@@ -21,61 +21,50 @@ num2 = float(input('num2: '))
 num3 = float(input('num3: '))
 num4 = float(input('num4: '))
 
-# determine positive and negative numbers
-if num1 >= 0:
-    num1_pos = num1
-    num1_neg = 0
-elif num1 < 0:
-    num1_pos = 0
-    num1_neg = num1
-
-if num2 >= 0:
-    num2_pos = num2
-    num2_neg = 0
-elif num2 < 0:
-    num2_pos = 0
-    num2_neg = num2
-
-if num3 >= 0:
-    num3_pos = num3
-    num3_neg = 0
-elif num3 < 0:
-    num3_pos = 0
-    num3_neg = num3
-
-if num4 >= 0:
-    num4_pos = num4
-    num4_neg = 0
-elif num4 < 0:
-    num4_pos = 0
-    num4_neg = num4
-
-
-# perform calculations
+# calculate sumAll and set initial sumNeg and sumPos as 0
 sumAll = num1 + num2 + num3 + num4
-sumPos = num1_pos + num2_pos + num3_pos + num4_pos
-sumNeg = num1_neg + num2_neg + num3_neg + num4_neg
+sumNeg = 0
+sumPos = 0
+
+# Check each number if pos or neg and add to apropriate sum
+# num1
+if num1 < 0:
+    sumNeg += num1
+else:
+    sumPos += num1
+
+# num2
+if num2 < 0:
+    sumNeg += num2
+else:
+    sumPos += num2
+
+# num3
+if num3 < 0:
+    sumNeg += num3
+else:
+    sumPos += num3
+
+# num4
+if num4 < 0:
+    sumNeg += num4
+else:
+    sumPos += num4
 
 # output
-print(f'sumAll is {sumAll:.2f}')
-print(f'sumPos is {sumPos:.2f}')
-print(f'sumNeg is {sumNeg:.2f}')
+print(f'sumAll is {sumAll}, sumPos is {sumPos}, and sumNeg is {sumNeg}.')
+
 
 
 
 '''
 
-Test Run 1 (combo):
+***PROGRAM OUTPUT***
 
-
-Test Run 2 (all numbers are positive):
-
-
-Test Run 3 (all numbers are negative):
-
-
-Error Test 1 (input is not an int):
-
-
+num1: -3.55
+num2: 3
+num3: -2.5
+num4: 2.01
+sumAll is -1.04, sumPos is 5.01, and sumNeg is -6.05.
 
 '''
