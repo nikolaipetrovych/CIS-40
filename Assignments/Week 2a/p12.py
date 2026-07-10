@@ -41,7 +41,7 @@ if reg != 'y':
     print('- You must register to vote.')
     reasons += 1
 
-# report the result
+# output the result
 if reasons == 0:
     print('Congratulations! You are eligible to vote.')
 else:
