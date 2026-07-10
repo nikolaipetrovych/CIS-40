@@ -1,6 +1,6 @@
 # p17.py
 # Nikolai Petrovych
-# 7/7/26
+# 7/7/26 - 7/10/26
 # Python 3.12.10
 # Description: 
 '''Suppose that the tuition for a university is $10,000 this year and increases 5% every year.
@@ -19,6 +19,15 @@ for year in range (1,11):
 
 ***PROGRAM OUTPUT***
 
-[------]
+Year 1:   $10000
+Year 2:   $10500
+Year 3:   $11025
+Year 4:   $11576
+Year 5:   $12155
+Year 6:   $12763
+Year 7:   $13401
+Year 8:   $14071
+Year 9:   $14775
+Year 10:   $15513
 
 '''

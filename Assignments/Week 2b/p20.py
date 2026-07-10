@@ -1,6 +1,6 @@
 # p20.py
 # Nikolai Petrovych
-# 7/7/26
+# 7/7/26 - 7/10/26
 # Python 3.12.10
 # Description: 
 '''Write a program that reads in X whole numbers and outputs
@@ -12,7 +12,7 @@ and can repeat the program if desired. '''
 
 
 run = True
-while run == True:
+while run:
     sumAll = 0
     sumPos = 0
     sumNeg = 0
@@ -37,6 +37,15 @@ print('Thank you for using p20.py.')
 
 ***PROGRAM OUTPUT***
 
-[------]
+How many numbers would you like to enter? 6
+Please enter number 1: -2
+Please enter number 2: -1
+Please enter number 3: 5
+Please enter number 4: 7
+Please enter number 5: 0
+Please enter number 6: -.5 
+sumAll is 8.50, sumPos is 12.00, and sumNeg is -3.50.
+The program will run again. Enter 'quit' to exit. Enter any key to run again: quit
+Thank you for using p20.py.
 
 '''
