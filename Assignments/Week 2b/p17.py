@@ -11,7 +11,7 @@ A loop must be used.'''
 tuition = 10000 # initial tuition
 
 for year in range (1,11):
-    print(f'Year {year}:   ${tuition:.0f}')
+    print(f'Year {year}:   ${int(tuition)}')
     tuition *= 1.05
 
 
@@ -24,10 +24,10 @@ Year 2:   $10500
 Year 3:   $11025
 Year 4:   $11576
 Year 5:   $12155
-Year 6:   $12763
-Year 7:   $13401
+Year 6:   $12762
+Year 7:   $13400
 Year 8:   $14071
-Year 9:   $14775
+Year 9:   $14774
 Year 10:   $15513
 
 '''

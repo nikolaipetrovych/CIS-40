@@ -1,6 +1,6 @@
 # p13.py
 # Nikolai Petrovych
-# 7/5/26
+# 7/5/26 - 7/10/26
 # Python 3.12.10
 # Description: 
 '''Write a program to convert any given number of total cents (under 100)
@@ -8,7 +8,6 @@ into the correct number of: quarters, dimes, nickels, pennies.'''
 
 # ask for total cents
 total = int(input('Enter the total amount of cents (whole number): '))
-running_total = total
 
 # check if total is <100
 if total >= 100:
@@ -16,7 +15,10 @@ if total >= 100:
     total = int(input('Reenter the total amount of cents (whole number): '))
     if total >= 100:
         print('Total amount of cents needs to be under 100. Restart the program.')
-    quit()
+        quit()
+
+# use the validated total for calcs
+running_total = total
 
 # calculate quarters
 quarters = int(running_total/25)
@@ -54,7 +56,7 @@ Test Run 2 (over 100, reenter under 100):
 Enter the total amount of cents (whole number): 104
 Total amount of cents needs to be under 100.
 Reenter the total amount of cents (whole number): 99
-Change is 4 quarters, 0 dimes, 0 nickels, and 4 pennies.
+Change is 3 quarters, 2 dimes, 0 nickels, and 4 pennies.
 
 Error Test 1 (input is not an int):
 Enter the total amount of cents (whole number): abc

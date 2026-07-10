@@ -75,7 +75,7 @@ if ( month == 9 and day >= 23 ) or ( month == 10 and day <= 23 ):
     print("Your Zodiac Sign is a Libra")
 
 # scorpio
-if ( month == 10 and day >= 23 ) or ( month == 11 and day <= 21 ):
+if ( month == 10 and day >= 24 ) or ( month == 11 and day <= 21 ):
     print("Your Zodiac Sign is a Scorpio")
 
 # sagittarius

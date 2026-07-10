@@ -1,6 +1,6 @@
 # p15.py
 # Nikolai Petrovych
-# 7/5/26
+# 7/5/26 - 7/10/26
 # Python 3.12.10
 # Description: Program that asks the user to enter 4 numbers (positive or negative).
 '''The program shows:
@@ -53,8 +53,6 @@ else:
 
 # output
 print(f'sumAll is {sumAll}, sumPos is {sumPos}, and sumNeg is {sumNeg}.')
-
-
 
 
 '''
