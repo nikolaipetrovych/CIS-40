@@ -1,6 +1,6 @@
 # p24.py
 # Nikolai Petrovych
-# 7/10/26
+# 7/10/26 - 7/17/26
 # Python 3.12.10
 # Description:
 '''Write a program that generates X random integers Num.
@@ -13,23 +13,34 @@ sort(), sorted()!!'''
 
 import random
 
-x = random.randint(10,15)
+x = random.randint(10,15) # generate random x
+
+# set bounds
 lower = 20
 upper = 50
-list1 = []
+
+# initial min, max and sum
 smallest = upper
 largest = lower
 sumall = 0
-for i in range(x):
-    num = random.randint(lower,upper)
-    list1.append(num)
-    if list1[i] > largest:
-        largest = list1[i]
-    if list1[i] < smallest:
-        smallest = list1[i]
-    sumall += num
+
+list1 = [] # empty list
+
+for i in range(x): # loop x times
+    num = random.randint(lower,upper) # generate a random integer
+    list1.append(num) # add random integer to empty list
+    
+    if list1[i] > largest: # check if random integer is greater than prev. max
+        largest = list1[i] # if yes, assign new max
         
-average = sumall / x
+    if list1[i] < smallest: # check if random integer is smaller than prev. min
+        smallest = list1[i] # if yes, assign new min
+        
+    sumall += num # add the integer to sum
+        
+average = sumall / x # get average by dividing sum by the tot. numbers in list
+
+# show result to user
 print(f"List is {list1}. The length of the list is {len(list1)}.")
 print(f"Smallest is {smallest}, Largest is {largest}, Sum is {sumall}, Average is {average:.4f}")
 

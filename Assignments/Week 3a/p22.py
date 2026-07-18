@@ -1,6 +1,6 @@
 # p22.py
 # Nikolai Petrovych
-# 7/10/26
+# 7/10/26 - 7/17/26
 # Python 3.12.10
 # Description:
 '''Write a Dice Game program that generates two random dice values between 1 and 6
@@ -19,14 +19,14 @@ userdice2 = random.randint(1,6)
 
 # display user dice values and ask if user wants to reroll
 while True:
-    keepgoing = input(f'You rolled {userdice1} and {userdice2}. Would you like to roll again? (y/n): ').lower()
-    if keepgoing == 'n':
+    keepgoing = input(f'You rolled {userdice1} and {userdice2}. Would you like to roll again? (y/n): ').lower() # ask to reroll
+    if keepgoing == 'n': # no reroll, move on to next step
         break
-    elif keepgoing == 'y':
+    elif keepgoing == 'y': # if reroll, generate new values and ask to reroll again
         userdice1 = random.randint(1,6)
         userdice2 = random.randint(1,6)
     else:
-        print('Answer has to be in format (y/n).')
+        print('Answer has to be in format (y/n).') # if answer was not y/n
 
 # generate computer dice values
 computerdice1 = random.randint(1,6)
@@ -38,11 +38,11 @@ print(f'Computer rolled {computerdice1} and {computerdice2}.')
 #compute and compare scores
 usersum = userdice1 + userdice2
 computersum = computerdice1 + computerdice2
-if usersum > computersum:
-    print(f'{usersum} is higher than {computersum}. You won!')
-elif usersum < computersum:
-    print(f'{usersum} is lower than {computersum}. You lost.')
-else:
+if usersum > computersum: # if user won
+    print(f'{usersum} is higher than {computersum}. You won!') 
+elif usersum < computersum: # if computer won
+    print(f'{usersum} is lower than {computersum}. You lost.') 
+else: # if tie
     print(f"You both scored {usersum}. It's a tie!")
 
 

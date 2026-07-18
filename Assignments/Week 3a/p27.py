@@ -1,10 +1,10 @@
 # p27.py
 # Nikolai Petrovych
-# 7/10/26
+# 7/10/26 - 7/17/26
 # Python 3.12.10
 # Description:
 '''Write a program that generates a random list of letters.
-# start with an empty_list = [ ]  and use empty_list.append(Letter) to add letters.
+start with an empty_list = [ ]  and use empty_list.append(Letter) to add letters.
 The length of the list of letters changes every time you run the program.
 There can be a random number of X letters on the list, where X is a random number
 between 50 to 75.
@@ -27,8 +27,8 @@ for i in range(x): # create list
 print(f"The list is {empty_list} and has a length of {len(empty_list)}.") # display list and its length to the user
 
 count = 0 # set initial count
-for i in range(len(empty_list)): # go through the whole list one by one
-    if empty_list[i] == "B": # if 'B' is found
+for i in empty_list: # through every letter in the list
+    if i == "B": # if 'B' matches the letter
         count += 1 # add 1 to count
 
 print(f"The letter 'B' appears in the list {count} time(s).") # display final count of 'B' to user
