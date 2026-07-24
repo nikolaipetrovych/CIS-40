@@ -1,11 +1,11 @@
 # p38.py
 # Nikolai Petrovych
-# 7/11/26
+# 7/11/26 - 7/24/26
 # Python 3.12.10
 # Description:
 '''Write a program that asks the user to enter a sentence.
 The program then finds the longest word in the sentence and shows it.
-NOTE: The use of python functions max() and sorted() is NOT permitted!'''
+Note: The use of python functions max() and sorted() is NOT permitted!'''
 
 
 sentence = input("Please enter a sentence: ")
@@ -20,7 +20,7 @@ for word in splitsentence:
     if lettercount > lettercount_max:
         lettercount_max = lettercount
         longestword = word
-        
+
 print(f"The longest word in '{sentence}' is *{longestword}*, and has *{lettercount_max}* letters.")
 
 '''

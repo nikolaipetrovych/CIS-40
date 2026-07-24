@@ -1,6 +1,6 @@
 # p39.py
 # Nikolai Petrovych
-# 7/11/26
+# 7/11/26 - 7/24/26
 # Python 3.12.10
 # Description:
 '''Write a program that asks the user to enter a sentence. Your program will:
@@ -19,7 +19,9 @@ The word 'the' appears 2 times'''
 
 
 sentence = input("Please enter a sentence: ")
-splitsentence = sentence.split()
+splitsentence = sentence.lower()
+splitsentence = splitsentence.split()
+
 
 # count words
 wordcount = 0
@@ -27,14 +29,14 @@ for word in splitsentence:
     wordcount += 1
 
 print(f"There are {wordcount} words in the sentence you entered.")
-    
+
 # find last word
 lastword = splitsentence[-1]
 print(f"The last word in the sentence is '{lastword}'.")
 
 # word search
 while True:
-    search = input("Please enter a word to search: ")
+    search = input("Please enter a word to search: ").lower()
     instancecount = 0
     for word in splitsentence:
         if word == search:
@@ -55,12 +57,22 @@ while True:
 ***PROGRAM OUTPUT***
 
 Test Run 1 (search word appears multiple times):
+Please enter a sentence: The fox and the dog
+There are 5 words in the sentence you entered.
+The last word in the sentence is 'dog'.
+Please enter a word to search: the
+The word 'the' appears 2 time(s).
+Would you like to search again (y/n)? y
+Please enter a word to search: Dog
+The word 'dog' appears 1 time(s).
+Would you like to search again (y/n)? n
 
-
-Test Run 2 (search word appears once or not at all):
-
-
-Test Run 3 (search word does not appear in the sentece):
-
+Test Run 2 (search word does not appear):
+Please enter a sentence: Plane and a guy
+There are 4 words in the sentence you entered.
+The last word in the sentence is 'guy'.
+Please enter a word to search: Wow
+The word 'wow' appears 0 time(s).
+Would you like to search again (y/n)? n
 
 '''
