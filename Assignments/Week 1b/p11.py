@@ -12,23 +12,23 @@ The program then shows the winner on the basis of:
 -Tie'''
 
 
-import random #random number generation module
+import random  # random number generation module
 
 # get p1 and p2 input
-mode = input('Would you like P2 to generate randomly? (y/n): ') # ask if P2 should be randomly generated or chose manually
+mode = input('Would you like P2 to generate randomly? (y/n): ')  # ask if P2 should be randomly generated or chose manually
 if mode == 'y':
     p1 = input('P1: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ') #ask for p1 input
-    p2 = random.randint(1,3) #generate a random p2 choice between 1 and 3
+    p2 = random.randint(1,3)  # generate a random p2 choice between 1 and 3
 elif mode == 'n':
-    p1 = input('P1: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ') #ask for p1 input
-    p2 = input('P2: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ') #ask for p2 input
+    p1 = input('P1: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ')  # ask for p1 input
+    p2 = input('P2: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ')  # ask for p2 input
 else:
     print('Only enter (y/n).')
     quit()
 
 # convert R/P/S into 1/2/3 and check if all inputs are valid
 
-#check P1
+# check P1
 if p1 == 'R' or p1 == '1':
     p1 = 1
 elif p1 == 'P' or p1 == '2':
@@ -41,7 +41,7 @@ else:
 
 
 #check P2
-if mode =='n': #only check when P2 is entered manually (as a string)
+if mode =='n':  # only check when P2 is entered manually (as a string)
     if p2 == 'R' or p2 == '1':
         p2 = 1
     elif p2 == 'P' or p2 == '2':
@@ -52,7 +52,7 @@ if mode =='n': #only check when P2 is entered manually (as a string)
         print('Please only enter (1/2/3 or R/P/S)')
         quit()
 
-#set 1/2/3 as rock/paper/scissors variables
+# set 1/2/3 as rock/paper/scissors variables
 rock = 1
 paper = 2
 scissors = 3
@@ -77,10 +77,9 @@ elif p2 == paper and p1 == rock:
 elif p2 == scissors and p1 == paper:
     print ("P2 wins, scissors cut paper")
 
-#check tie conditions
+# check tie conditions
 if p1 == p2:
     print('It\'s a tie!')
-
 
 '''
 

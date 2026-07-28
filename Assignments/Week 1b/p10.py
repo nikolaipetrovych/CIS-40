@@ -1,6 +1,6 @@
 # p10.py
 # Nikolai Petrovych
-# 7/4/26
+# 7/4/26 (edited on 7/28/26)
 # Python 3.12.10
 # Description: Program 10 - Letter Grades with Input Validation
 '''Write a program which asks the user for a student's grade as a percent, and then returns their letter grade.
@@ -17,9 +17,10 @@ percentage = float(input("Please enter your grade as a percent (only the number)
 
 # validate the input and determine grade
 if percentage < 0 or percentage > 100:
-    print('ERROR: Please enter a value between 0 and 100')
-    quit()
-elif percentage >= 90:
+    percentage = float(input('ERROR: Please enter a value between 0 and 100: '))
+    if percentage < 0 or percentage > 100:
+        quit()
+if percentage >= 90:
     grade = "A"
 elif 80 <= percentage < 90:
     grade = "B"
@@ -30,8 +31,8 @@ elif 60 <= percentage < 70:
 elif percentage < 60:
     grade = "F"
 
-# outpput letter grade
-print(f'Your grade is \'{grade}\'')
+# output letter grade
+print(f"Your grade is '{grade}'")
 
 '''
 
@@ -57,13 +58,15 @@ Run 5 (F):
 Please enter your grade as a percent (only the number): 0
 Your grade is 'F'
 
-Error test 1 (percentage > 100)
+Error test 1 (percentage > 100):
 Please enter your grade as a percent (only the number): 102
-ERROR: Please enter a value between 0 and 100
+ERROR: Please enter a value between 0 and 100: 85
+Your grade is 'B'
 
-Error test 2 (percentage < 0)
+Error test 2 (percentage < 0):
 Please enter your grade as a percent (only the number): -5.2
-ERROR: Please enter a value between 0 and 100
+ERROR: Please enter a value between 0 and 100: 45
+Your grade is 'F'
 
 Error test 3 (input is not a float):
 Please enter your grade as a percent (only the number): hello

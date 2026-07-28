@@ -17,11 +17,9 @@ The last word is 'dog'
 Please enter a word to search: the
 The word 'the' appears 2 times'''
 
-
 sentence = input("Please enter a sentence: ")
 splitsentence = sentence.lower()
 splitsentence = splitsentence.split()
-
 
 # count words
 wordcount = 0
@@ -50,7 +48,6 @@ while True:
             break
     if keep == 'n':
         break
-
 
 '''
 

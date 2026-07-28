@@ -1,6 +1,6 @@
 # p9.py
 # Nikolai Petrovych
-# 7/4/26
+# 7/4/26 (edited on 7/28/26)
 # Python 3.12.10
 # Description: Program 9 - User Height Message
 '''Write a program to compute a person's height and print out a message.
@@ -35,7 +35,7 @@ print(f'{feet} feet and {inches} inch(es) is {total_inches} inches')
 if total_inches > 72: # tall message
     print('Wow! You are tall :)')
 
-elif 5*12 < total_inches < 6*12: # average message
+elif 5*12 <= total_inches <= 6*12: # average message
     print('Your height is average')
 
 elif total_inches < 60: # short message
@@ -55,16 +55,30 @@ Wow! You are tall :)
 
 Run 2 (average):
 Please only enter WHOLE numbers
-Please enter the number of feet: 5 
+Please enter the number of feet: 5
 Please enter the number of inches: 11
 5 feet and 11 inch(es) is 71 inches
 Your height is average
 
 Run 3 (short):
 Please only enter WHOLE numbers
-Please enter the number of feet: 4 
+Please enter the number of feet: 4
 Please enter the number of inches: 11
 4 feet and 11 inch(es) is 59 inches
 Your height is less than 5 feet :(
+
+Run 4 (exactly 5 feet, lower boundary):
+Please only enter WHOLE numbers
+Please enter the number of feet: 5
+Please enter the number of inches: 0
+5 feet and 0 inch(es) is 60 inches
+Your height is average
+
+Run 5 (exactly 6 feet, upper boundary):
+Please only enter WHOLE numbers
+Please enter the number of feet: 6
+Please enter the number of inches: 0
+6 feet and 0 inch(es) is 72 inches
+Your height is average
 
 '''

@@ -1,8 +1,8 @@
 # p13.py
 # Nikolai Petrovych
-# 7/5/26 - 7/10/26
+# 7/5/26 - 7/10/26 (edited on 7/28/26)
 # Python 3.12.10
-# Description: 
+# Description:
 '''Write a program to convert any given number of total cents (under 100)
 into the correct number of: quarters, dimes, nickels, pennies.'''
 
@@ -22,15 +22,15 @@ running_total = total
 
 # calculate quarters
 quarters = int(running_total/25)
-running_total -= quarters*25 # update total count
+running_total -= quarters*25  # update total count
 
 # calculate dimes
 dimes = int(running_total/10)
-running_total -= dimes*10 # update total count
+running_total -= dimes*10  # update total count
 
 # calculate nickels
 nickels = int(running_total/5)
-running_total -= nickels*5 # update total count
+running_total -= nickels*5  # update total count
 
 # calculate pennies
 pennies = running_total
@@ -57,6 +57,22 @@ Enter the total amount of cents (whole number): 104
 Total amount of cents needs to be under 100.
 Reenter the total amount of cents (whole number): 99
 Change is 3 quarters, 2 dimes, 0 nickels, and 4 pennies.
+
+Test Run 3 (66 cents):
+Enter the total amount of cents (whole number): 66
+Change is 2 quarters, 1 dimes, 1 nickels, and 1 pennies.
+
+Test Run 4 (16 cents):
+Enter the total amount of cents (whole number): 16
+Change is 0 quarters, 1 dimes, 1 nickels, and 1 pennies.
+
+Test Run 5 (6 cents):
+Enter the total amount of cents (whole number): 6
+Change is 0 quarters, 0 dimes, 1 nickels, and 1 pennies.
+
+Test Run 6 (4 cents):
+Enter the total amount of cents (whole number): 4
+Change is 0 quarters, 0 dimes, 0 nickels, and 4 pennies.
 
 Error Test 1 (input is not an int):
 Enter the total amount of cents (whole number): abc
