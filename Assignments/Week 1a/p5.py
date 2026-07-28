@@ -20,7 +20,7 @@ num2 = int(input('Enter 2nd number: '))
 sum = num1 + num2
 product = num1 * num2
 
-#output results
+# output results
 print(f'The result of {num1}+{num2} is {sum}')
 print(f'The result of {num1}*{num2} is {product}')
 

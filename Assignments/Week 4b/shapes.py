@@ -30,30 +30,25 @@ The program checks if the type of quadrilateral is either:
 
 def allequal(list):
     x0 = list[0]
-    for x in list: #  checks if every entry is equal to the first
-        if not x == x0:
+    for x in list:  # checks if every entry is equal to the first
+        if x != x0:
             return False
     return True
 
-def rhombus(s, a): #  2a
-    if allequal(s) and a[0] == a[2] and a[1] == a[3]:
-        return True
-    return False
+
+def rhombus(s, a):  # 2a
+    return allequal(s) and a[0] == a[2] and a[1] == a[3]
 
 
-def square(s, a): #  2b
-    if allequal(s) and allequal(a):
-        return True
-    return False
+def square(s, a):  # 2b
+    return allequal(s) and allequal(a)
 
 
-def rect(s, a): #  2c
-    if allequal(a) and s[0] == s[2] and s[1] == s[3]:
-        return True
-    return False
+def rect(s, a):  # 2c
+    return allequal(a) and s[0] == s[2] and s[1] == s[3]
 
 
-def checkall(s, a): #  call functions and output
+def checkall(s, a):  # call functions and output
     print()
     print("=======================")
     print(f"Shape is a rhombus: {rhombus(s, a)}")
@@ -61,26 +56,25 @@ def checkall(s, a): #  call functions and output
     print(f"Shape is a rectangle: {rect(s, a)}")
 
 
-
-while True: #  main loop/1d
-    print("=== Please enter Sides ===") #  1a
+while True:  # main loop/1d
+    print("=== Please enter Sides ===")  # 1a
     sides = []
     for i in range(4):
         while True:
-            side = float(input(f"Enter side {i+1}: "))
-            if side > 0: #  1c.1
+            side = float(input(f"Enter side {i + 1}: "))
+            if side > 0:  # 1c.1
                 break
             else:
                 print("Side values must be positive. Please reenter.")
         sides.append(side)
 
     print()
-    print("=== Please enter Angles ===") #  1b
+    print("=== Please enter Angles ===")  # 1b
     angles = []
     for i in range(4):
         while True:
-            angle = float(input(f"Enter angle {i+1}: "))
-            if angle > 0: #  1c.2
+            angle = float(input(f"Enter angle {i + 1}: "))
+            if angle > 0:  # 1c.2
                 break
             else:
                 print("Angle values must be positive. Please reenter.")
@@ -89,7 +83,7 @@ while True: #  main loop/1d
     checkall(sides, angles)
 
     while True:
-        repeat = input("Would you like to repeat? (1-Yes, 2-No): ") #  1d
+        repeat = input("Would you like to repeat? (1-Yes, 2-No): ")  # 1d
         if repeat == "1" or repeat == "2":
             break
         else:

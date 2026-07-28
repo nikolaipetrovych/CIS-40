@@ -25,16 +25,16 @@ print( middle(1,5,2) )'''
 
 
 def speed(dist, time):
-    speed_result = dist / time #  calculate
-    print(f"{speed_result:.2f}") #  output
+    speed_result = dist / time  # calculate
+    print(f"{speed_result:.2f}")  # output
 
 
 def middle(num1, num2, num3):
-    if (num1 > num2 and num1 < num3) or (num1 < num2 and num1 > num3): #  num1 is median
+    if (num1 > num2 and num1 < num3) or (num1 < num2 and num1 > num3):  # num1 is median
         median_result = num1
-    elif (num2 > num1 and num2 < num3) or (num2 < num1 and num2 > num3): #  num2 is median
+    elif (num2 > num1 and num2 < num3) or (num2 < num1 and num2 > num3):  # num2 is median
         median_result = num2
-    elif (num3 > num1 and num3 < num2) or (num3 < num1 and num3 > num2): #  num3 is median
+    elif (num3 > num1 and num3 < num2) or (num3 < num1 and num3 > num2):  # num3 is median
         median_result = num3
     else:
         print("Values have to be distinct")
@@ -43,11 +43,11 @@ def middle(num1, num2, num3):
     return median_result
 
 
-speed(730,12)
+speed(730, 12)
 
-print(middle(1,2,5))
-print(middle(2,1,5))
-print(middle(1,5,2))
+print(middle(1, 2, 5))
+print(middle(2, 1, 5))
+print(middle(1, 5, 2))
 
 '''
 

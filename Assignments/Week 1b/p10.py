@@ -11,6 +11,7 @@ C is between 70% and 80%
 D is between 60% and 70%
 F is under 60%'''
 
+import sys
 
 # ask for percent grade
 percentage = float(input("Please enter your grade as a percent (only the number): "))
@@ -19,7 +20,7 @@ percentage = float(input("Please enter your grade as a percent (only the number)
 if percentage < 0 or percentage > 100:
     percentage = float(input('ERROR: Please enter a value between 0 and 100: '))
     if percentage < 0 or percentage > 100:
-        quit()
+        sys.exit()
 if percentage >= 90:
     grade = "A"
 elif 80 <= percentage < 90:

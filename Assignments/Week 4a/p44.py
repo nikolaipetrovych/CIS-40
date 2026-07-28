@@ -18,23 +18,23 @@ lockers = []
 for i in range(1000):
     lockers.append(True)
 
-for student in range(2,1001):
-    for i in range(student-1, 1000, student):
-        if lockers[i] == True:
+for student in range(2, 1001):
+    for i in range(student - 1, 1000, student):
+        if lockers[i]:
             lockers[i] = False
         else:
             lockers[i] = True
 
 openlockers = []
 for i in range(1000):
-    if lockers[i] == True:
-        openlockers.append(i+1)
-print(openlockers) # locker numbers that are open
+    if lockers[i]:
+        openlockers.append(i + 1)
+print(openlockers)  # locker numbers that are open
 
 # count
 totalopen = 0
 for i in lockers:
-    if i == True:
+    if i:
         totalopen += 1
 print(f"{totalopen} total lockers are open.")
 

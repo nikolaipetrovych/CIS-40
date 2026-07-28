@@ -10,7 +10,9 @@ If the total inches is greater than 72, the message should be something like, "Y
 If the total inches is between 5' and 6', a different message should appear, like "You are average"
 If the total inches is less than 60, another message should appear, like "You are vertically challenged"'''
 
-#from p6.py
+import sys
+
+# from p6.py
 print('Please only enter WHOLE numbers')
 feet = int(input('Please enter the number of feet: '))
 inches = int(input('Please enter the number of inches: '))
@@ -19,26 +21,26 @@ inches = int(input('Please enter the number of inches: '))
 
 if feet < 0 or inches < 0:
     print('Please enter positive numbers for feet and inches')
-    exit()
+    sys.exit()
 elif inches > 12:
     print('Inches values cannot exceed 12')
-    exit()
+    sys.exit()
 
 # calculate total inches
-total_inches = feet*12 + inches
+total_inches = feet * 12 + inches
 
 # output total inches to user
 print(f'{feet} feet and {inches} inch(es) is {total_inches} inches')
 
-#end from p6.py / start new code
+# end from p6.py / start new code
 
-if total_inches > 72: # tall message
+if total_inches > 72:  # tall message
     print('Wow! You are tall :)')
 
-elif 5*12 <= total_inches <= 6*12: # average message
+elif 5 * 12 <= total_inches <= 6 * 12:  # average message
     print('Your height is average')
 
-elif total_inches < 60: # short message
+elif total_inches < 60:  # short message
     print('Your height is less than 5 feet :(')
 
 

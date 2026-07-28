@@ -14,35 +14,35 @@ Test your program for: 1) You win  2) You lose  3) Tie'''
 import random
 
 # generate user dice values
-userdice1 = random.randint(1,6)
-userdice2 = random.randint(1,6)
+userdice1 = random.randint(1, 6)
+userdice2 = random.randint(1, 6)
 
 # display user dice values and ask if user wants to reroll
 while True:
-    keepgoing = input(f'You rolled {userdice1} and {userdice2}. Would you like to roll again? (y/n): ').lower() # ask to reroll
-    if keepgoing == 'n': # no reroll, move on to next step
+    keepgoing = input(f'You rolled {userdice1} and {userdice2}. Would you like to roll again? (y/n): ').lower()  # ask to reroll
+    if keepgoing == 'n':  # no reroll, move on to next step
         break
-    elif keepgoing == 'y': # if reroll, generate new values and ask to reroll again
-        userdice1 = random.randint(1,6)
-        userdice2 = random.randint(1,6)
+    elif keepgoing == 'y':  # if reroll, generate new values and ask to reroll again
+        userdice1 = random.randint(1, 6)
+        userdice2 = random.randint(1, 6)
     else:
-        print('Answer has to be in format (y/n).') # if answer was not y/n
+        print('Answer has to be in format (y/n).')  # if answer was not y/n
 
 # generate computer dice values
-computerdice1 = random.randint(1,6)
-computerdice2 = random.randint(1,6)
+computerdice1 = random.randint(1, 6)
+computerdice2 = random.randint(1, 6)
 
 # display computer values
 print(f'Computer rolled {computerdice1} and {computerdice2}.')
 
-#compute and compare scores
+# compute and compare scores
 usersum = userdice1 + userdice2
 computersum = computerdice1 + computerdice2
-if usersum > computersum: # if user won
-    print(f'{usersum} is higher than {computersum}. You won!') 
-elif usersum < computersum: # if computer won
-    print(f'{usersum} is lower than {computersum}. You lost.') 
-else: # if tie
+if usersum > computersum:  # if user won
+    print(f'{usersum} is higher than {computersum}. You won!')
+elif usersum < computersum:  # if computer won
+    print(f'{usersum} is lower than {computersum}. You lost.')
+else:  # if tie
     print(f"You both scored {usersum}. It's a tie!")
 
 

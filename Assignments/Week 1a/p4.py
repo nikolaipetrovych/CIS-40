@@ -6,8 +6,8 @@
 
 letter = input("Enter a letter: ")
 
-print(f'************************************************')
-print(f'')
+print('************************************************')
+print()
 print(f'            {letter} {letter} {letter}')
 print(f'          {letter}      {letter}')
 print(f'         {letter}')
@@ -17,8 +17,8 @@ print(f'        {letter}')
 print(f'         {letter}')
 print(f'          {letter}      {letter}')
 print(f'            {letter} {letter} {letter}')
-print(f' ')
-print(f'**************************************************')
+print()
+print('**************************************************')
 
 '''
 
@@ -36,7 +36,7 @@ Enter a letter: X
          X
           X      X
             X X X
- 
+
 **************************************************
 
 '''

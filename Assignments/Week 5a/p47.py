@@ -14,37 +14,38 @@ median().'''
 
 from random import randint
 
-def customsort(alist): #  from p43.py, bubblesort
+
+def customsort(alist):  # from p43.py, bubblesort
     sortedlist = alist
     for j in alist:
-        for i in range(len(sortedlist)-1):
-            if sortedlist[i] > sortedlist[i+1]:
+        for i in range(len(sortedlist) - 1):
+            if sortedlist[i] > sortedlist[i + 1]:
                 item = sortedlist[i]
-                sortedlist[i] = sortedlist[i+1]
-                sortedlist[i+1] = item
+                sortedlist[i] = sortedlist[i + 1]
+                sortedlist[i + 1] = item
     return sortedlist
 
 
 def custommedian(alist):
-    if len(alist) % 2 != 0: #  when odd
-        medianindex = int(len(alist)/2) #  int() rounds down giving middle index
+    if len(alist) % 2 != 0:  # when odd
+        medianindex = int(len(alist) / 2)  # int() rounds down giving middle index
         median = alist[medianindex]
-    else: #  when even
-        medianindex1 = int(len(alist) / 2) #  get right value index
-        medianindex2 = int(len(alist) / 2 - 1) #  get left value index
+    else:  # when even
+        medianindex1 = int(len(alist) / 2)  # get right value index
+        medianindex2 = int(len(alist) / 2 - 1)  # get left value index
         median = (alist[medianindex1] + alist[medianindex2]) / 2
     return median
 
 
-#  generate file
-numofentries = randint(50,55)
+# generate file
+numofentries = randint(50, 55)
 file = open("numbers.txt", 'w')
 for i in range(numofentries):
-    number = randint(0,100)
+    number = randint(0, 100)
     file.write(f"{number} ")
 file.close()
 
-#  turn file into list of ints
+# turn file into list of ints
 file = open("numbers.txt", 'r')
 numlist = []
 for x in file.read().split():
@@ -52,7 +53,7 @@ for x in file.read().split():
 numlistsorted = customsort(numlist)
 file.close()
 
-#  display results
+# display results
 print(f"The sorted list is {numlistsorted}")
 print(f"The median of all values is {(custommedian(numlistsorted)):.1f}")
 

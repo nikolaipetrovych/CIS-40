@@ -16,12 +16,13 @@ print( "5 is evenly divisible by 2: ", isDivisible(5,2) )
 Hint: n is evenly divisible by j when n % j == 0'''
 
 
-def isDivisible(n, m): # define func isDivisivle that takes inputs n and m
-    value = (n % m == 0) # check if n is divisible by n and assign the truth value to 'value'
-    return value # output 'value' to user
+def isDivisible(n, m):  # define func isDivisivle that takes inputs n and m
+    value = (n % m == 0)  # check if n is divisible by n and assign the truth value to 'value'
+    return value  # output 'value' to user
 
-print( "4 is evenly divisible by 2:", isDivisible(4,2)) # check if 4 is divisible by 2, True
-print( "5 is evenly divisible by 2:", isDivisible(5,2)) # check if 5 is divisible by 2, False
+
+print("4 is evenly divisible by 2:", isDivisible(4, 2))  # check if 4 is divisible by 2, True
+print("5 is evenly divisible by 2:", isDivisible(5, 2))  # check if 5 is divisible by 2, False
 
 
 '''

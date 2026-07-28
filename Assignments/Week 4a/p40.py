@@ -25,7 +25,6 @@ Average = 377 / 11 = 34.3
 Smallest = 20
 Largest = 49'''
 
-
 x = int(input("How many numbers would you like to enter? "))
 
 xlist = []
@@ -35,7 +34,7 @@ for num in range(x):
     xlist.append(entry)
     xsum += entry
 
-xavg = xsum/x
+xavg = xsum / x
 xmin = xlist[0]
 xmax = xlist[0]
 for num in xlist:

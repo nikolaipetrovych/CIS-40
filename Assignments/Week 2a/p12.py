@@ -2,32 +2,32 @@
 # Nikolai Petrovych
 # 7/5/26 - 7/10/26
 # Python 3.12.10
-# Description: 
+# Description:
 '''Write a program to determine if the user can vote.
 The program will ask the user a series of questions - age, citizenship and registration.
 The user will receive a message as to whether or not s/he may vote --
 yes, no (with a reason - too young, not a citizen, hasn't registered to vote).'''
 
+import sys
 
 # ask all three questions
-
 # get age
 age = int(input('Please enter your age as a whole number: '))
 if age < 0:
     print('Please only enter positive numbers for age.')
-    quit()
+    sys.exit()
 
 # get citizenship
 citizen = input('Are you a U.S. citizen (y/n)? ').lower()
 if citizen != 'y' and citizen != 'n':
     print('Please only enter (y/n).')
-    quit()
+    sys.exit()
 
 # get registration
 reg = input('Are you currently registered to vote (y/n)? ').lower()
 if reg != 'y' and reg != 'n':
     print('Please only enter (y/n).')
-    quit()
+    sys.exit()
 
 # collect every reason the user can't vote
 reasons = 0
@@ -46,8 +46,6 @@ if reasons == 0:
     print('Congratulations! You are eligible to vote.')
 else:
     print(f'Unfortunately, you are not able to vote. See the {reasons} reason(s) for that above.')
-
-
 
 '''
 

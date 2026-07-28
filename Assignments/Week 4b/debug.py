@@ -21,14 +21,12 @@ The number 5 is even: False'''
 
 
 def isEven(value):
-    if (value % 2) == 0: #  check if even
-        return True
-    return False
+    return (value % 2) == 0  # check if even
 
 
 def main():
-    num = int(input("Enter a number: ")) #  get number
-    print("The number %i is even: %s" %(num, isEven(num))) #  output
+    num = int(input("Enter a number: "))  # get number
+    print(f"The number {num} is even: {isEven(num)}")  # output
 
 
 main()

@@ -9,8 +9,8 @@ A prime number can only be evenly (remainder 0) divided by itself and 1.'''
 
 
 primes = []
-for i in range(3,101):
-    for k in range(2,i):
+for i in range(3, 101):
+    for k in range(2, i):
         if i % k == 0:
             isprime = False
             break

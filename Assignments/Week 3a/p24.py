@@ -10,10 +10,9 @@ Calculate and show the Smallest, Largest, Sum, and Average of those numbers.
 You are not allowed to use Python functions sample(), min(), max(), average(),
 sort(), sorted()!!'''
 
-
 import random
 
-x = random.randint(10,15) # generate random x
+x = random.randint(10, 15)  # generate random x
 
 # set bounds
 lower = 20
@@ -24,26 +23,25 @@ smallest = upper
 largest = lower
 sumall = 0
 
-list1 = [] # empty list
+list1 = []  # empty list
 
-for i in range(x): # loop x times
-    num = random.randint(lower,upper) # generate a random integer
-    list1.append(num) # add random integer to empty list
-    
-    if list1[i] > largest: # check if random integer is greater than prev. max
-        largest = list1[i] # if yes, assign new max
-        
-    if list1[i] < smallest: # check if random integer is smaller than prev. min
-        smallest = list1[i] # if yes, assign new min
-        
-    sumall += num # add the integer to sum
-        
-average = sumall / x # get average by dividing sum by the tot. numbers in list
+for i in range(x):  # loop x times
+    num = random.randint(lower, upper)  # generate a random integer
+    list1.append(num)  # add random integer to empty list
+
+    if list1[i] > largest:  # check if random integer is greater than prev. max
+        largest = list1[i]  # if yes, assign new max
+
+    if list1[i] < smallest:  # check if random integer is smaller than prev. min
+        smallest = list1[i]  # if yes, assign new min
+
+    sumall += num  # add the integer to sum
+
+average = sumall / x  # get average by dividing sum by the tot. numbers in list
 
 # show result to user
 print(f"List is {list1}. The length of the list is {len(list1)}.")
 print(f"Smallest is {smallest}, Largest is {largest}, Sum is {sumall}, Average is {average:.4f}")
-
 
 '''
 

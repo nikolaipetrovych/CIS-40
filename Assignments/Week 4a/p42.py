@@ -20,12 +20,14 @@ def sum(list_parameter):
         sum += num
     return sum
 
+
 def average(list_parameter):
     sum = 0
     for num in list_parameter:
         sum += num
     average = sum / len(list_parameter)
     return average
+
 
 def min(list_parameter):
     min = list_parameter[0]
@@ -34,6 +36,7 @@ def min(list_parameter):
             min = num
     return min
 
+
 def max(list_parameter):
     max = list_parameter[0]
     for num in list_parameter:
@@ -41,14 +44,14 @@ def max(list_parameter):
             max = num
     return max
 
+
 def main():
-    mylist = [1,2,3,4,5,6,7,8,9,10]
+    mylist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     print(f'List is {mylist}.')
     print(f"{sum(mylist)}, {average(mylist)}, {min(mylist)}, {max(mylist)}")
 
+
 main()
-
-
 
 '''
 

@@ -17,14 +17,15 @@ print( 'The absolute value of -1 is', absolute(-1) )
 print( 'The absolute value of 1 is', absolute(1) )'''
 
 
-def absolute(a): # define func 'absolute' with an arg 'a'
-    if a < 0: # if a is nonpositive
-        abs_a = -a # invert the sign (take the absolute value)
-        return abs_a # return the absolute value of the original negative value 'a'
-    return a # if a was not nonpositive, return back a
+def absolute(a):  # define func 'absolute' with an arg 'a'
+    if a < 0:  # if a is nonpositive
+        abs_a = -a  # invert the sign (take the absolute value)
+        return abs_a  # return the absolute value of the original negative value 'a'
+    return a  # if a was not nonpositive, return back a
 
-print(f"The absolute value of -1 is {absolute(-1)}.") # take absolute value of -1, should be 1
-print(f"The absolute value of 1 is {absolute(1)}.") # take absolute value of 1, should stay as 1
+
+print(f"The absolute value of -1 is {absolute(-1)}.")  # take absolute value of -1, should be 1
+print(f"The absolute value of 1 is {absolute(1)}.")  # take absolute value of 1, should stay as 1
 
 
 '''

@@ -2,7 +2,7 @@
 # Nikolai Petrovych
 # 7/7/26 - 7/10/26
 # Python 3.12.10
-# Description: 
+# Description:
 '''Write a program that reads in X whole numbers and outputs
 (1) the sum of all positive numbers,
 (2) the sum of all negative numbers, and
@@ -17,7 +17,7 @@ while run:
     sumPos = 0
     sumNeg = 0
     x = int(input('How many numbers would you like to enter? '))
-    for i in range(1, x+1):
+    for i in range(1, x + 1):
         num = float(input(f'Please enter number {i}: '))
         sumAll += num
         if num < 0:
@@ -28,7 +28,7 @@ while run:
     ask = input("The program will run again. Enter 'quit' to exit. Enter any key to run again: ").lower()
     if ask == 'quit':
         run = False
-      
+
 
 print('Thank you for using p20.py.')
 
@@ -43,7 +43,7 @@ Please enter number 2: -1
 Please enter number 3: 5
 Please enter number 4: 7
 Please enter number 5: 0
-Please enter number 6: -.5 
+Please enter number 6: -.5
 sumAll is 8.50, sumPos is 12.00, and sumNeg is -3.50.
 The program will run again. Enter 'quit' to exit. Enter any key to run again: quit
 Thank you for using p20.py.

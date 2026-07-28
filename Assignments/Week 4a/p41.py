@@ -27,7 +27,7 @@ an empty line to move to the next row.'''
 def stars(numCrosses):
     for row in (range(1, numCrosses + 1)):
         for column in range(row):
-            print("+", end = ' ')
+            print("+", end=' ')
         print()
 
 
@@ -38,10 +38,10 @@ stars(5)
 ***PROGRAM OUTPUT***
 
 Test Run 1 (stars(5)):
-+ 
-+ + 
-+ + + 
-+ + + + 
-+ + + + + 
++
++ +
++ + +
++ + + +
++ + + + +
 
 '''

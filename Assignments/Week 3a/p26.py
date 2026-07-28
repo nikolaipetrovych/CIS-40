@@ -13,21 +13,20 @@ You are not allowed to use python built-in function "count()" or you'll get a Ze
 
 import random
 
-mylist = [] # create an empty list
-x = random.randint(15,20) # generate x value between 15 and 20
-for i in range(x): # x times
-    num = random.randint(2,5) # generate a number between 2 and 5
-    mylist.append(num) # add the number to list
+mylist = []  # create an empty list
+x = random.randint(15, 20)  # generate x value between 15 and 20
+for i in range(x):  # x times
+    num = random.randint(2, 5)  # generate a number between 2 and 5
+    mylist.append(num)  # add the number to list
 
-print(f"List is {mylist}. Its length is {len(mylist)} since x was {x}.") # display list
+print(f"List is {mylist}. Its length is {len(mylist)} since x was {x}.")  # display list
 
-count = 0 # set initial count
-for i in mylist: # go through every number in the list
-    if i == 3: # if the number is 3, add 1 to count
+count = 0  # set initial count
+for i in mylist:  # go through every number in the list
+    if i == 3:  # if the number is 3, add 1 to count
         count += 1
 
-print(f"Number 3 appears in the list {count} time(s).") # display result
-
+print(f"Number 3 appears in the list {count} time(s).")  # display result
 
 '''
 
@@ -44,6 +43,5 @@ Number 3 appears in the list 4 time(s).
 Test Run 3:
 List is [3, 2, 4, 5, 3, 3, 2, 2, 2, 2, 5, 3, 5, 3, 2, 3, 4]. Its length is 17 since x was 17.
 Number 3 appears in the list 6 time(s).
-
 
 '''

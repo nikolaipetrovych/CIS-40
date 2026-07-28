@@ -16,13 +16,13 @@ print( "4 is even: ", isEven(4) )
 Hint: A number N is even if N % 2 == 0'''
 
 
+def isEven(n):  # define func isEven that takes input n
+    result = (n % 2 == 0)  # check if n is even and assign the boolean value to 'result'
+    return result  # return the boolean 'result' to user
 
-def isEven(n): # define func isEven that takes input n
-    result = (n % 2 == 0) # check if n is even and assign the boolean value to 'result'
-    return result # return the boolean 'result' to user
 
-print( "3 is even:", isEven(3)) # check if 3 is even, should be False
-print( "4 is even:", isEven(4)) # check if 4 is even, should be True
+print("3 is even:", isEven(3))  # check if 3 is even, should be False
+print("4 is even:", isEven(4))  # check if 4 is even, should be True
 
 '''
 

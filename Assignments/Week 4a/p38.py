@@ -7,7 +7,6 @@
 The program then finds the longest word in the sentence and shows it.
 Note: The use of python functions max() and sorted() is NOT permitted!'''
 
-
 sentence = input("Please enter a sentence: ")
 splitsentence = sentence.split()
 

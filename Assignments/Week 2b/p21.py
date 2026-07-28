@@ -2,7 +2,7 @@
 # Nikolai Petrovych
 # 7/7/26 - 7/10/26
 # Python 3.12.10
-# Description: 
+# Description:
 '''Which of the below gives you more money?
 1) A penny which doubles it's value every day over 30 days, or
 2) A million dollars
@@ -17,7 +17,7 @@ running_amt = starting_amt
 compare_to = 1000000
 
 for day in range(1, days):
-    running_amt *= 2 
+    running_amt *= 2
     print(f'On day {day + 1}, you will have ${running_amt:.2f} from ${starting_amt}.')
 
 diff = running_amt - compare_to

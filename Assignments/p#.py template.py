@@ -1,18 +1,15 @@
 # p##.py
 # Nikolai Petrovych
-# 7/4/26
+# xx/xx/26
 # Python 3.12.10
-# Description: 
-'''[  ]'''
-
-
-# <==> 
+# Description:
+''' [] '''
 
 
 '''
 
 ***PROGRAM OUTPUT***
 
-[------]
+[]
 
 '''

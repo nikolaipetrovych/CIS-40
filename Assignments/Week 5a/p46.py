@@ -38,12 +38,12 @@ filename = filenameuser + ".txt"
 #  get movie names and append them into a list
 movies = []
 for i in range(4):
-    movies.append(input(f"Please enter a movie title #{i+1}: "))
+    movies.append(input(f"Please enter a movie title #{i + 1}: "))
 
 #  write movies to new file
 print(f"... Writing the 4 movie titles to file '{filename}'")
 file = open(filename, 'w')
-for x in movies:
+for x in movies:  # ruff:ignore[for-loop-writes]
     file.write(f"{x}\n")
 file.close()
 
@@ -56,7 +56,7 @@ file.close()
 #  create a reverse file and write movies in reverse order
 print("... Writing the 4 movie titles in reverse to 'reverseOrder.txt'")
 reversefile = open("reverseOrder.txt", 'w')
-for i in range(len(movielistnew)-1,-1,-1):
+for i in range(len(movielistnew) - 1, -1, -1):
     reversefile.write(f"{movielistnew[i]}\n")
 reversefile.close()
 print(f"List created: {movielistnew}")

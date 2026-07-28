@@ -2,13 +2,14 @@
 # Nikolai Petrovych
 # 7/4/26
 # Python 3.12.10
-# Description: 
+# Description:
 '''Write a program to compute a person's height.
 
 INPUT: User will enter two whole numbers: feet and inches.
 OUTPUT: Values input & total in inches.
 INPUT VALIDATION: Make sure that feet and inches are positive values'''
 
+import sys
 
 # ask user to input feet and inches
 print('Please only enter WHOLE numbers')
@@ -19,13 +20,13 @@ inches = int(input('Please enter the number of inches: '))
 
 if feet < 0 or inches < 0:
     print('Please enter positive numbers for feet and inches')
-    exit()
+    sys.exit()
 elif inches > 12:
     print('Inches values cannot exceed 12')
-    exit()
+    sys.exit()
 
 # calculate total inches
-total_inches = feet*12 + inches
+total_inches = feet * 12 + inches
 
 # output total inches to user
 print(f'{feet} feet and {inches} inch(es) is {total_inches} inches')

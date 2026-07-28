@@ -20,14 +20,14 @@ HINT:
 
 sunspots = open("sunspots.txt", 'r')
 averages = open("averages.txt", 'w')
-sunspots_lines = sunspots.read().splitlines() #  make a list of lines
+sunspots_lines = sunspots.read().splitlines()  # make a list of lines
 
 averages.write("Year   Avg\n")
 for line in sunspots_lines:
-    values = line.split() #  create a list of individual entries of a line
-    year = int(values[0]) #  record first value in the line as a list
+    values = line.split()  # create a list of individual entries of a line
+    year = int(values[0])  # record first value in the line as a list
     total_sunspots = 0
-    for i in range(1,len(values)): #  go over every value except first (year)
+    for i in range(1, len(values)):  # go over every value except first (year)
         total_sunspots += float(values[i])
     average = total_sunspots / (len(values) - 1)
     averages.write(f"{year}   ")

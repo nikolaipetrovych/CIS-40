@@ -11,26 +11,24 @@ You are not allowed to use python built-in function "count()" or you'll get a Ze
 Output will show the sentence, the letter, and the number of times the letter
 appears in the sentence.'''
 
-
-sentence = input("Input a sentence: ") # ask user for a sentence
-sentencelow = sentence.lower() # make a new variable to store the sentence in all lowercase (to standardize)
+sentence = input("Input a sentence: ")  # ask user for a sentence
+sentencelow = sentence.lower()  # make a new variable to store the sentence in all lowercase (to standardize)
 print("Which two letters would you like to count?")
-letter1 = input("Enter 1st letter: ").lower() # ask for letter #1 to search
-letter2 = input("Enter 2nd letter: ").lower() # ask for letter #2 to search
+letter1 = input("Enter 1st letter: ").lower()  # ask for letter #1 to search
+letter2 = input("Enter 2nd letter: ").lower()  # ask for letter #2 to search
 
-count1 = 0 # initial count 1
-count2 = 0 # initial count 2
-for i in sentencelow: # go through every letter in the sentence
-    if i == letter1: # if letter matches letter #1, add to count 1
+count1 = 0  # initial count 1
+count2 = 0  # initial count 2
+for i in sentencelow:  # go through every letter in the sentence
+    if i == letter1:  # if letter matches letter #1, add to count 1
         count1 += 1
-    if i == letter2: # if letter matches letter #2, add to count 2
+    if i == letter2:  # if letter matches letter #2, add to count 2
         count2 += 1
 
 # display results of the program
-print(f'The sentence was: "{sentence}"') # use original sentence
+print(f'The sentence was: "{sentence}"')  # use original sentence
 print(f"The letter '{letter1}' appears {count1} time(s).")
 print(f"The letter '{letter2}' appears {count2} time(s).")
-
 
 '''
 

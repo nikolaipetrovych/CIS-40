@@ -10,7 +10,7 @@ is False, and in DESCENDING order if parameter 'reverse' is True.
     def sort(alist, reverse):
 
 Function Call:
-alist = [5,1,4,3,2]
+alist = [5, 1, 4, 3, 2]
 print( sort(alist, False) )   # [1, 2, 3, 4, 5]
 print( sort(alist, True) )    # [5, 4, 3, 2, 1]
 
@@ -22,23 +22,23 @@ print(), input(), len(), or range().'''
 def sort(alist, reverse):
     sortedlist = alist
     for j in alist:
-        for i in range(len(sortedlist)-1):
-            if reverse == False:
-                if sortedlist[i] > sortedlist[i+1]:
+        for i in range(len(sortedlist) - 1):
+            if not reverse:
+                if sortedlist[i] > sortedlist[i + 1]:
                     item = sortedlist[i]
-                    sortedlist[i] = sortedlist[i+1]
-                    sortedlist[i+1] = item
+                    sortedlist[i] = sortedlist[i + 1]
+                    sortedlist[i + 1] = item
             else:
-                if sortedlist[i] < sortedlist[i+1]:
+                if sortedlist[i] < sortedlist[i + 1]:
                     item = sortedlist[i]
-                    sortedlist[i] = sortedlist[i+1]
-                    sortedlist[i+1] = item
+                    sortedlist[i] = sortedlist[i + 1]
+                    sortedlist[i + 1] = item
     return sortedlist
 
-alist = [5,1,4,3,2]
-print(sort(alist, False)) #  [1, 2, 3, 4, 5]
-print(sort(alist, True)) #  [5, 4, 3, 2, 1]
 
+alist = [5, 1, 4, 3, 2]
+print(sort(alist, False))  # [1, 2, 3, 4, 5]
+print(sort(alist, True))  # [5, 4, 3, 2, 1]
 
 '''
 

@@ -28,11 +28,11 @@ for i in range(10):
 numListSorted = numList.copy()  # copy to keep the unsorted list for Part C
 for j in range(len(numListSorted)):  # bubble sort
     for i in range(len(numListSorted) - 1):
-        if numListSorted[i] > numListSorted[i+1]:
+        if numListSorted[i] > numListSorted[i + 1]:
             # swap the two elements using temp
             temp = numListSorted[i]
-            numListSorted[i] = numListSorted[i+1]
-            numListSorted[i+1] = temp
+            numListSorted[i] = numListSorted[i + 1]
+            numListSorted[i + 1] = temp
 
 # PART C
 print(f"UNSORTED: numList = {numList}")

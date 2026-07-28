@@ -28,21 +28,21 @@ print("Three sticks with length 3,20,4 can form a triangle:", isTriangle(3,20,4)
 print("Three sticks with length 3,4,20 can form a triangle:", isTriangle(3,4,20))'''
 
 
-def isTriangle(a, b, c): # create an isTriangle function that takes inputs a,b,c (stick lengths)
-    result = not (a > b+c or b > a+c or c > a+b) # check if any side is greater than the two others. since we want to output False when any of them are, take the inverse with 'not'. Assign the truth value to 'result'.
-    return result # output 'result' value back
+def isTriangle(a, b, c):  # create an isTriangle function that takes inputs a,b,c (stick lengths)
+    result = not (a > b + c or b > a + c or c > a + b)  # check if any side is greater than the two others. since we want to output False when any of them are, take the inverse with 'not'. Assign the truth value to 'result'.
+    return result  # output 'result' value back
+
 
 # check all conditions from assignment directions
-print("Three sticks with length 3,4,5 can form a triangle:", isTriangle(3,4,5)) # should be True: 3,4,5 traiangle
-print("Three sticks with length 3,5,4 can form a triangle:", isTriangle(3,5,4)) # should be True: 3,4,5 traiangle
-print("Three sticks with length 4,3,5 can form a triangle:", isTriangle(4,3,5)) # should be True: 3,4,5 traiangle
-print("Three sticks with length 4,5,3 can form a triangle:", isTriangle(4,5,3)) # should be True: 3,4,5 traiangle
-print("Three sticks with length 5,4,3 can form a triangle:", isTriangle(5,4,3)) # should be True: 3,4,5 traiangle
-print("Three sticks with length 5,3,4 can form a triangle:", isTriangle(5,3,4)) # should be True: 3,4,5 traiangle
-print("Three sticks with length 20,3,4 can form a triangle:", isTriangle(20,3,4)) # should be False
-print("Three sticks with length 3,20,4 can form a triangle:", isTriangle(3,20,4)) # should be False
-print("Three sticks with length 3,4,20 can form a triangle:", isTriangle(3,4,20)) # should be False
-        
+print("Three sticks with length 3,4,5 can form a triangle:", isTriangle(3, 4, 5))  # should be True: 3,4,5 traiangle
+print("Three sticks with length 3,5,4 can form a triangle:", isTriangle(3, 5, 4))  # should be True: 3,4,5 traiangle
+print("Three sticks with length 4,3,5 can form a triangle:", isTriangle(4, 3, 5))  # should be True: 3,4,5 traiangle
+print("Three sticks with length 4,5,3 can form a triangle:", isTriangle(4, 5, 3))  # should be True: 3,4,5 traiangle
+print("Three sticks with length 5,4,3 can form a triangle:", isTriangle(5, 4, 3))  # should be True: 3,4,5 traiangle
+print("Three sticks with length 5,3,4 can form a triangle:", isTriangle(5, 3, 4))  # should be True: 3,4,5 traiangle
+print("Three sticks with length 20,3,4 can form a triangle:", isTriangle(20, 3, 4))  # should be False
+print("Three sticks with length 3,20,4 can form a triangle:", isTriangle(3, 20, 4))  # should be False
+print("Three sticks with length 3,4,20 can form a triangle:", isTriangle(3, 4, 20))  # should be False
 
 '''
 

@@ -9,6 +9,7 @@ Validate Input: Make sure that the radius is positive, or give an error message.
 The program will show the circumference and area of a circle with that radius.
 The answers should be rounded to the nearest tenth.'''
 
+import sys
 
 # ask for input (radius)
 q = input("Would you like to enter radius or diameter (r/d)? ")
@@ -18,14 +19,14 @@ elif q == 'd':
     rad = float(input('What is the diameter (in inches) of the circle you want to draw?: ')) / 2
 else:
     print('Input has to be either \'r\' or \'d\'')
-    quit()
+    sys.exit()
 
-if rad <= 0: #check if radius is positive
+if rad <= 0:  # check if radius is positive
     print('Radius/diameter value has to be greater than 0')
-    quit()
-else: # calculate area and circumference
-    area = 3.1415*(rad**2)
-    circumference = 2*3.1415*rad
+    sys.exit()
+else:  # calculate area and circumference
+    area = 3.1415 * (rad**2)
+    circumference = 2 * 3.1415 * rad
 
 # display results
 print(f'A circle with radius {rad} inches has a circumference of {circumference:.1f} inches and an area of {area:.1f} sq. inches.')

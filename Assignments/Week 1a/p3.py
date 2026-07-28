@@ -11,8 +11,8 @@ weightKg = weightLbs * 0.453592
 title = "Human"
 
 print("Hello", title, name, "your weight is")
-print( weightLbs, "lbs")
-print("which equals = %.2f" %weightKg, end=' ')  # end=' ' prevents new line
+print(weightLbs, "lbs")
+print(f"which equals = {weightKg:.2f}", end=' ')  # end=' ' prevents new line
 print("kg")
 
 '''

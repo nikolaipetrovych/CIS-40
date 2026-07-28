@@ -17,22 +17,22 @@ Hint: ascii A = 65 ... F = 70; use chr(randint(65,70)) to make a random letter.'
 
 import random
 
-empty_list = [] # create empty list
-x = random.randint(50,75) # generate a random value x for list length
+empty_list = []  # create empty list
+x = random.randint(50, 75)  # generate a random value x for list length
 
-for i in range(x): # create list
-    letter = chr(random.randint(65,70)) # generate random letter from A to F
-    empty_list.append(letter) # add the random letter to list
+for i in range(x):  # create list
+    letter = chr(random.randint(65, 70))  # generate random letter from A to F
+    empty_list.append(letter)  # add the random letter to list
 
-print(f"The list is {empty_list} and has a length of {len(empty_list)}.") # display list and its length to the user
+print(f"The list is {empty_list} and has a length of {len(empty_list)}.")  # display list and its length to the user
 
-count = 0 # set initial count
-for i in empty_list: # through every letter in the list
-    if i == "B": # if 'B' matches the letter
-        count += 1 # add 1 to count
+count = 0  # set initial count
+for i in empty_list:  # through every letter in the list
+    if i == "B":  # if 'B' matches the letter
+        count += 1  # add 1 to count
 
-print(f"The letter 'B' appears in the list {count} time(s).") # display final count of 'B' to user
-      
+print(f"The letter 'B' appears in the list {count} time(s).")  # display final count of 'B' to user
+
 '''
 
 ***PROGRAM OUTPUT***

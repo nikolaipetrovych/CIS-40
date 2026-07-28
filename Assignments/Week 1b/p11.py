@@ -11,20 +11,20 @@ The program then shows the winner on the basis of:
 -Scissors cut Paper
 -Tie'''
 
-
 import random  # random number generation module
+import sys
 
 # get p1 and p2 input
 mode = input('Would you like P2 to generate randomly? (y/n): ')  # ask if P2 should be randomly generated or chose manually
 if mode == 'y':
-    p1 = input('P1: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ') #ask for p1 input
-    p2 = random.randint(1,3)  # generate a random p2 choice between 1 and 3
+    p1 = input('P1: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ')  # ask for p1 input
+    p2 = random.randint(1, 3)  # generate a random p2 choice between 1 and 3
 elif mode == 'n':
     p1 = input('P1: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ')  # ask for p1 input
     p2 = input('P2: Please enter 1 or R for rock, 2 or P for paper, 3 or S for scissors: ')  # ask for p2 input
 else:
     print('Only enter (y/n).')
-    quit()
+    sys.exit()
 
 # convert R/P/S into 1/2/3 and check if all inputs are valid
 
@@ -37,11 +37,11 @@ elif p1 == 'S' or p1 == '3':
     p1 = 3
 else:
     print('Please only enter (1/2/3 or R/P/S)')
-    quit()
+    sys.exit()
 
 
-#check P2
-if mode =='n':  # only check when P2 is entered manually (as a string)
+# check P2
+if mode == 'n':  # only check when P2 is entered manually (as a string)
     if p2 == 'R' or p2 == '1':
         p2 = 1
     elif p2 == 'P' or p2 == '2':
@@ -50,7 +50,7 @@ if mode =='n':  # only check when P2 is entered manually (as a string)
         p2 = 3
     else:
         print('Please only enter (1/2/3 or R/P/S)')
-        quit()
+        sys.exit()
 
 # set 1/2/3 as rock/paper/scissors variables
 rock = 1
@@ -67,7 +67,7 @@ if p1 == rock and p2 == scissors:
 elif p1 == paper and p2 == rock:
     print("P1 wins, paper covers rock")
 elif p1 == scissors and p2 == paper:
-    print ("P1 wins, scissors cut paper")
+    print("P1 wins, scissors cut paper")
 
 # check win conditions for P2
 if p2 == rock and p1 == scissors:
@@ -75,7 +75,7 @@ if p2 == rock and p1 == scissors:
 elif p2 == paper and p1 == rock:
     print("P2 wins, paper covers rock")
 elif p2 == scissors and p1 == paper:
-    print ("P2 wins, scissors cut paper")
+    print("P2 wins, scissors cut paper")
 
 # check tie conditions
 if p1 == p2:

@@ -12,9 +12,9 @@ n3 = 0.3
 
 # output multiplication table
 print(f'      {n1}    {n2}    {n3}')
-print(f'{n1}   {n1*n1:.2f}   {n2*n1:.2f}   {n3*n1:.2f}')
-print(f'{n2}   {n1*n2:.2f}   {n2*n2:.2f}   {n3*n2:.2f}')
-print(f'{n3}   {n1*n3:.2f}   {n2*n3:.2f}   {n3*n3:.2f}')
+print(f'{n1}   {n1 * n1:.2f}   {n2 * n1:.2f}   {n3 * n1:.2f}')
+print(f'{n2}   {n1 * n2:.2f}   {n2 * n2:.2f}   {n3 * n2:.2f}')
+print(f'{n3}   {n1 * n3:.2f}   {n2 * n3:.2f}   {n3 * n3:.2f}')
 
 
 '''

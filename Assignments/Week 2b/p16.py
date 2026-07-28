@@ -2,7 +2,7 @@
 # Nikolai Petrovych
 # 7/7/26 - 7/10/26
 # Python 3.12.10
-# Description: 
+# Description:
 '''Program which uses a while loop to display a conversion table,
 with kilograms on the left and pounds on the right.
 Pounds are rounded to 1 decimal digit.
@@ -15,7 +15,7 @@ print('Kilograms:   Pounds:')
 kg = 1
 
 while kg < 200:
-    lb = kg*2.2
+    lb = kg * 2.2
     print(f'{kg:<3}          {lb:.1f}')
     kg += 2
 

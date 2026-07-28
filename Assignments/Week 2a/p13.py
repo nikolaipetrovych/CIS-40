@@ -6,6 +6,8 @@
 '''Write a program to convert any given number of total cents (under 100)
 into the correct number of: quarters, dimes, nickels, pennies.'''
 
+import sys
+
 # ask for total cents
 total = int(input('Enter the total amount of cents (whole number): '))
 
@@ -15,22 +17,22 @@ if total >= 100:
     total = int(input('Reenter the total amount of cents (whole number): '))
     if total >= 100:
         print('Total amount of cents needs to be under 100. Restart the program.')
-        quit()
+        sys.exit()
 
 # use the validated total for calcs
 running_total = total
 
 # calculate quarters
-quarters = int(running_total/25)
-running_total -= quarters*25  # update total count
+quarters = int(running_total / 25)
+running_total -= quarters * 25  # update total count
 
 # calculate dimes
-dimes = int(running_total/10)
-running_total -= dimes*10  # update total count
+dimes = int(running_total / 10)
+running_total -= dimes * 10  # update total count
 
 # calculate nickels
-nickels = int(running_total/5)
-running_total -= nickels*5  # update total count
+nickels = int(running_total / 5)
+running_total -= nickels * 5  # update total count
 
 # calculate pennies
 pennies = running_total

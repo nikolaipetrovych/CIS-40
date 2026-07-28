@@ -2,12 +2,12 @@
 # Nikolai Petrovych
 # 7/2/26
 # Python 3.12.10
-''' Description: 
+''' Description:
 Write a program that prints out "CS!" in large block letters inside a border of ***
 followed by two blank lines then the message "Computer Science is Cool Stuff." '''
 
 print('************************************************')
-print('')
+print()
 print('            C C C                 S S S')
 print('          C       C              S      S')
 print('         C                      S')
@@ -17,7 +17,7 @@ print('        C                              S')
 print('         C                              S')
 print('          C       C             S      S')
 print('            C C C                S S S')
-print('')
+print()
 print('**************************************************')
 print('Computer Science is Cool Stuff!!')
 

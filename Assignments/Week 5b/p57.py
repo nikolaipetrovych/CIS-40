@@ -24,8 +24,8 @@ Sample Output: 821.392'''
 file = open("aa.txt", 'r')
 file_values = file.read().split()
 dict = {}
-for i in range(0,len(file_values),2): #  iterate over every letter (2 steps apart)
-    dict[file_values[i]] = float(file_values[i+1]) #  assign a corresponding value to each letter
+for i in range(0, len(file_values), 2):  # iterate over every letter (2 steps apart)
+    dict[file_values[i]] = float(file_values[i + 1])  # assign a corresponding value to each letter
 file.close()
 
 #  input prompt and validation / 2)
@@ -34,11 +34,11 @@ while True:
     isvalid = True
     for x in letters:
         found = False
-        for i in range(0, len(file_values), 2): # iterate over valid letters
-            if x == file_values[i]: # check if a letter matches one in the dict
+        for i in range(0, len(file_values), 2):  # iterate over valid letters
+            if x == file_values[i]:  # check if a letter matches one in the dict
                 found = True
                 break
-        if not found: #  invalid input
+        if not found:  # invalid input
             isvalid = False
             break
     if isvalid:
