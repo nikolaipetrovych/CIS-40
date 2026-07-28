@@ -29,7 +29,7 @@ def speed(dist, time):
     print(f"{speed_result:.2f}") #  output
 
 
-def middle(num1, num2, num3): 
+def middle(num1, num2, num3):
     if (num1 > num2 and num1 < num3) or (num1 < num2 and num1 > num3): #  num1 is median
         median_result = num1
     elif (num2 > num1 and num2 < num3) or (num2 < num1 and num2 > num3): #  num2 is median
@@ -39,7 +39,7 @@ def middle(num1, num2, num3):
     else:
         print("Values have to be distinct")
         return
-    
+
     return median_result
 
 

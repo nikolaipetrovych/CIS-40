@@ -5,7 +5,7 @@
 # Description:
 '''A quadrilateral is a shape with 4 sides and 4 angles.
 Write a program that lets the user enter 4 sides and 4 angles into LISTS.
-The program checks if the type of quadrilateral is either: 
+The program checks if the type of quadrilateral is either:
 - Rhombus
 - Square
 - Rectangle
@@ -15,10 +15,10 @@ The program checks if the type of quadrilateral is either:
  c) The program validates that all 8 numbers are positive. (10pts)
  e) The program can repeat if user choses to. (10pts)
 2)  Use the LISTS to identify the Type of Quadrilateral (30 pts) :
- a) Rhombus (all 3 must be true) (10 pts): 
-  1. All four sides have the same length. 
-  2. Angle 1 equals Angle 3 
-  3. Angle 2 equals Angle 4 
+ a) Rhombus (all 3 must be true) (10 pts):
+  1. All four sides have the same length.
+  2. Angle 1 equals Angle 3
+  3. Angle 2 equals Angle 4
  b) Square (both must be true) (10 pts):
   1. All four sides have the same length.
   2. All angles are equal to each other
@@ -87,14 +87,14 @@ while True: #  main loop/1d
         angles.append(angle)
 
     checkall(sides, angles)
-    
-    while True:  
+
+    while True:
         repeat = input("Would you like to repeat? (1-Yes, 2-No): ") #  1d
         if repeat == "1" or repeat == "2":
             break
         else:
             print("Enter only 1 or 2.")
-    
+
     if repeat == "2":
         break
 

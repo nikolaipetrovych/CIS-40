@@ -7,7 +7,7 @@
 num = input ("Please enter a number: ")
 def  isEven( ): # should have a parameter
   if  num%2 = 0
-     retrn True: 
+     retrn True:
   else (num%2 != 0):
      return False
 
